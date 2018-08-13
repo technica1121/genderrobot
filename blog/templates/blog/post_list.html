@@ -1,0 +1,19 @@
+<html>
+  <!-- title -->
+  <div>
+    <h1>
+      <a href="/">
+        Qiita: Djangoサンプル
+      </a>
+    </h1>
+  </div>
+
+  <!-- post の内容 -->
+  {% for post in posts %}
+    <div  style="margin-top:50px;">
+      <h2>title:<a href="">{{ post.title }}</a></h2>
+      <p>published: {{ post.published_date}}</p>
+      <p>{{ post.text | linebreaks }}</p>
+    </div>
+  {% endfor %}
+</html>
