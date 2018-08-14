@@ -1,5 +1,5 @@
 *.pyc
 staticfiles
-db.sqlite3s
+db.sqlite3
 __pycache__
 local_settings.py
