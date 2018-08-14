@@ -1,4 +1,4 @@
-*.pyc
+*.py[co]
 staticfiles
 db.sqlite3
 __pycache__
