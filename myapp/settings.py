@@ -123,7 +123,7 @@ STATIC_URL = '/static/'
 
 import dj_database_url
 #DATABASES['default'] = dj_database_url.config()
-db_from_env = dj_database_url.config(conn_max_age=500, require_ssl=True)
+db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
