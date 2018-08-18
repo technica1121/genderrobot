@@ -120,11 +120,12 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')#本番環境でのみ利用される。/path/to/myapp/staticデプロイ環境のためにcollectstaticが静的ファイルを集めるディレクトリへの絶対パスつまりここに集まる
 """
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+#たぶんアプリごとに追加の静的ファイルがあるようなときに設定する必要がある．
 """
 
 import dj_database_url
