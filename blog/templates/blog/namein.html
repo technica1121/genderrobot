@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+
+{% block content %}
+       <div class="box">
+           <h1>名前を入力するとAIが性別を識別します</h1>
+           <form action="" method="post">
+               {% csrf_token %}
+               {{form.as_p}}
+               <span><input type="submit" value="識別する"></span>
+           </form>
+       </div>
+   </body>
+{% endblock %}
