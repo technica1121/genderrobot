@@ -15,6 +15,7 @@ def namein(request):
     else:
         form = forms.NameForm(label_suffix='：')
         return render(request, 'blog/namein.html', {'form': form})
+
 """
     form = forms.NameForm(label_suffix='：')
     return render(request, 'blog/namein.html', {'form': form})

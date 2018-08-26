@@ -2,13 +2,12 @@
 
 
 {% block content %}
-       <div class="box">
-           <h1>名前を入力するとAIが性別を識別します</h1>
-           <form action="" method="post">
-               {% csrf_token %}
-               {{form.as_p}}
-               <span><input type="submit" value="識別する"></span>
-           </form>
-       </div>
-   </body>
+    <div class="container">
+               <h1>名前を入力するとAIが性別を識別します</h1>
+               <form action="" method="post">
+                   {% csrf_token %}
+                   {{form}}
+                   <span><input type="submit" class="btn btn-primary" value="識別する"></span>
+               </form>
+    </div>
 {% endblock %}

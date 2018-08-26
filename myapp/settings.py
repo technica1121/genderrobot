@@ -42,7 +42,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -118,9 +117,10 @@ USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-
+"""
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')#本番環境でのみ利用される。/path/to/myapp/staticデプロイ環境のためにcollectstaticが静的ファイルを集めるディレクトリへの絶対パスつまりここに集まる
+STATIC_ROOT = os.path.join(BASE_DIR, 'blog/static')#本番環境でのみ利用される。/path/to/myapp/staticデプロイ環境のためにcollectstaticが静的ファイルを集めるディレクトリへの絶対パスつまりここに集まる
+"""
 """
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
@@ -138,6 +138,14 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 DEBUG = False
+
+STATIC_ROOT = 'blog/staticfiles'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'blog/static'),
+)
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 """
 try:
