@@ -4,3 +4,13 @@ gunicorn==19.9.0
 pytz==2018.5
 whitenoise==3.3.1
 psycopg2==2.7.5
+matplotlib==2.2.3
+numpy==1.15.1
+pandas==0.23.4
+scipy==1.1.0
+scikit-learn==0.19.2
+cycler==0.10.0
+kiwisolver==1.0.1
+pyparsing==2.2.0
+python-dateutil==2.7.3
+six==1.11.0
